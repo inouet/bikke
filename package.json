@@ -1,0 +1,21 @@
+{
+  "name": "bikke",
+  "version": "0.0.1",
+  "description": "Amazon DynamoDB CLI Utility",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Taiji Inoue",
+  "preferGlobal": true,
+  "bin": {
+    "bikke": "bin/bikke"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.1.28",
+    "commander": "^2.8.1",
+    "dynamodb-marshaler": "^1.1.2",
+    "phpjs": "^1.3.2"
+  }
+}
