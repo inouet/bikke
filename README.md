@@ -6,6 +6,9 @@ DynamoDB Command Line Interface
 
 ## Installation
 
+```
+$ npm install bikke --save
+```
 
 ## Usage
 
@@ -16,7 +19,7 @@ DynamoDB Command Line Interface
 ```
 $ bikke get --table <TableName> \
      --field <field1>,<field2>,<field3> \
-     --where user_id:＜HashKey> \
+     --where user_id:<HashKey> \
      --where timestamp/N:<RangeKey>
 
 ```
@@ -26,7 +29,7 @@ $ bikke get --table <TableName> \
 ```
 $ bikke query --table <TableName> \
      --where user_id:<HashKey> \
-     (--where  timestamp/N/LT:<RangeKey> \)
+     (--where  timestamp/N.LT:<RangeKey> \)
      --limit 10
 
 ```
@@ -37,7 +40,7 @@ $ bikke query --table <TableName> \
 $ bikke query --table <TableName> \
      --index-name <IndexName> \
      --where user_id:<HashKey> \
-     (--where timestamp/N/EQ:<RangeKey> \)
+     (--where timestamp/N.GT:<RangeKey> \)
      --limit 10
 
 ```
@@ -57,7 +60,7 @@ $ bikke update --table <TableName> \
 ### Put
 
 ```
-$ bikke put --table=<TableName> \
+$ bikke put --table <TableName> \
        --set user_id/N:1201 \
        --set name/S:John \
        --set age/N:20 
