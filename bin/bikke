@@ -3,5 +3,10 @@
 'use strict';
 
 var cli = require('../lib/bikke').cli;
-cli.run();
 
+try {
+    cli.run();
+} catch (ex) {
+    console.log(ex);
+    process.exit(1);
+}
