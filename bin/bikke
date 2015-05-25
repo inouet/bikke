@@ -7,6 +7,6 @@ var cli = require('../lib/bikke').cli;
 try {
     cli.run();
 } catch (ex) {
-    console.log(ex);
+    console.error(ex);
     process.exit(1);
 }
